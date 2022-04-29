@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/CellDescription.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/PetriVisual.tscn" type="PackedScene" id=2]
+
+[node name="Cell Description" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="VBoxContainer" parent="."]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 134.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cell Cords" type="Label" parent="Description"]
+margin_right = 133.0
+margin_bottom = 14.0
+text = "Contents in cell 1,1:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number of Tokens" type="Label" parent="Description"]
+margin_top = 18.0
+margin_right = 133.0
+margin_bottom = 32.0
+text = "0 tokens"
+
+[node name="Agent Buttons" type="VBoxContainer" parent="Description"]
+margin_top = 36.0
+margin_right = 133.0
+margin_bottom = 36.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PetriVisual" parent="." instance=ExtResource( 2 )]
+position = Vector2( 176.788, -0.561218 )

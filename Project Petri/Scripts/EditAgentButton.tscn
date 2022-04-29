@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://EditAgentButton.gd" type="Script" id=1]
+[ext_resource path="res://Edit_icon.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/AgentButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://trash-can.png" type="Texture" id=4]
+
+[node name="EditAgentButton" type="Control"]
+anchor_bottom = 0.037
+margin_right = 228.0
+margin_bottom = 0.799999
+rect_min_size = Vector2( 0, 22 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="HBoxContainer" parent="."]
+margin_right = 166.0
+margin_bottom = 22.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AgentButton" parent="Container" instance=ExtResource( 3 )]
+margin_right = 120.0
+rect_min_size = Vector2( 120, 0 )
+focus_mode = 0
+size_flags_vertical = 0
+enabled_focus_mode = 0
+
+[node name="EditButton" type="TextureButton" parent="Container"]
+margin_left = 124.0
+margin_right = 146.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 22, 22 )
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="AgentColor" type="ColorRect" parent="Container/EditButton"]
+show_behind_parent = true
+margin_right = 22.0
+margin_bottom = 22.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EditButton2" type="TextureButton" parent="Container"]
+margin_left = 150.0
+margin_right = 172.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 22, 22 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="DeletePop" type="WindowDialog" parent="."]
+visible = true
+margin_left = 3.0
+margin_top = 48.0
+margin_right = 177.0
+margin_bottom = 128.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DeletePop"]
+margin_left = 3.5636
+margin_top = 7.57266
+margin_right = 168.564
+margin_bottom = 38.5727
+text = "Are you sure you 
+want to delete this agent?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeleteButton" type="Button" parent="DeletePop"]
+margin_left = 38.8185
+margin_top = 46.909
+margin_right = 133.819
+margin_bottom = 66.909
+text = "Yes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Container/EditButton" to="." method="_on_EditButton_pressed"]
+[connection signal="pressed" from="Container/EditButton2" to="." method="_on_EditButton2_pressed"]
+[connection signal="pressed" from="DeletePop/DeleteButton" to="." method="_on_DeleteButton_pressed"]

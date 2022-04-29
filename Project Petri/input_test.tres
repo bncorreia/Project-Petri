@@ -1,0 +1,19 @@
+#P 6
+#T 5
+P 2 2
+P 4 1
+P 6 1
+ARC T 1 P 1 1
+ARC P 1 T 2 1
+ARC P 2 T 1 1
+ARC P 1 T 3 1
+ARC T 2 P 3 1
+ARC T 2 P 2 1
+ARC P 4 T 2 1
+ARC P 3 T 4 1
+ARC T 4 P 4 1
+ARC T 3 P 2 1
+ARC T 3 P 5 1
+ARC P 6 T 3 1
+ARC P 5 T 5 1
+ARC T 5 P 6 1

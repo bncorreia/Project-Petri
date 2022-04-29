@@ -1,0 +1,197 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/PetriVisual.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Grid.tscn" type="PackedScene" id=3]
+[ext_resource path="res://doomed/doomed.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 55
+font_data = ExtResource( 4 )
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )
+grid_path = "res://grids/empty.tres"
+
+[node name="MainMenu" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProjectTitle" type="Label" parent="MainMenu"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -144.125
+margin_bottom = -74.1247
+custom_fonts/font = SubResource( 1 )
+text = "PROJECT PETRI"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AgentButton" type="Button" parent="MainMenu"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 398.0
+margin_top = -20.1247
+margin_right = -398.0
+margin_bottom = 33.8753
+text = "Create Agents"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridButton" type="Button" parent="MainMenu"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 398.0
+margin_top = 63.8753
+margin_right = -398.0
+margin_bottom = 117.875
+text = "Start Simulation"
+
+[node name="AgentMenu" type="Control" parent="."]
+visible = false
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 1025.0
+margin_bottom = 604.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoBackButton" type="Button" parent="AgentMenu"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 398.0
+margin_top = -152.125
+margin_right = -398.0
+margin_bottom = -98.1247
+text = "Go Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreateAgentButton" type="Button" parent="AgentMenu"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 398.0
+margin_top = -78.1247
+margin_right = -398.0
+margin_bottom = -24.1247
+text = "Create New Agent"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="AgentMenu"]
+margin_left = 448.0
+margin_top = 304.0
+margin_right = 577.0
+margin_bottom = 318.0
+text = "Edit Existing Agents:"
+
+[node name="AgentScroll" type="ScrollContainer" parent="AgentMenu"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 371.0
+margin_top = -260.0
+margin_right = -371.0
+margin_bottom = -39.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AgentList" type="VBoxContainer" parent="AgentMenu/AgentScroll"]
+margin_right = 210.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 210, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="AgentMenu/AgentScroll/AgentList"]
+margin_right = 210.0
+margin_bottom = 20.0
+text = "aaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Button2" type="Button" parent="AgentMenu/AgentScroll/AgentList"]
+margin_top = 24.0
+margin_right = 210.0
+margin_bottom = 44.0
+text = "aaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Button3" type="Button" parent="AgentMenu/AgentScroll/AgentList"]
+margin_top = 48.0
+margin_right = 210.0
+margin_bottom = 68.0
+text = "aaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Button4" type="Button" parent="AgentMenu/AgentScroll/AgentList"]
+margin_top = 72.0
+margin_right = 210.0
+margin_bottom = 92.0
+text = "aaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Button5" type="Button" parent="AgentMenu/AgentScroll/AgentList"]
+margin_top = 96.0
+margin_right = 210.0
+margin_bottom = 116.0
+text = "aaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Button6" type="Button" parent="AgentMenu/AgentScroll/AgentList"]
+margin_top = 120.0
+margin_right = 210.0
+margin_bottom = 140.0
+text = "aaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Button7" type="Button" parent="AgentMenu/AgentScroll/AgentList"]
+margin_top = 144.0
+margin_right = 210.0
+margin_bottom = 164.0
+text = "aaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Button8" type="Button" parent="AgentMenu/AgentScroll/AgentList"]
+margin_top = 168.0
+margin_right = 210.0
+margin_bottom = 188.0
+text = "aaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Button9" type="Button" parent="AgentMenu/AgentScroll/AgentList"]
+margin_top = 192.0
+margin_right = 210.0
+margin_bottom = 212.0
+text = "aaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Button10" type="Button" parent="AgentMenu/AgentScroll/AgentList"]
+margin_top = 216.0
+margin_right = 210.0
+margin_bottom = 236.0
+text = "aaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Button11" type="Button" parent="AgentMenu/AgentScroll/AgentList"]
+margin_top = 240.0
+margin_right = 210.0
+margin_bottom = 260.0
+text = "aaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Grid" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="PetriVisual" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[connection signal="pressed" from="MainMenu/AgentButton" to="." method="_on_AgentButton_pressed"]
+[connection signal="pressed" from="MainMenu/GridButton" to="." method="_on_GridButton_pressed"]
+[connection signal="pressed" from="AgentMenu/GoBackButton" to="." method="_on_GoBackButton_pressed"]
+[connection signal="pressed" from="AgentMenu/CreateAgentButton" to="." method="_on_CreateAgentButton_pressed"]

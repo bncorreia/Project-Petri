@@ -1,0 +1,122 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://SharedSpaceButton.gd" type="Script" id=1]
+[ext_resource path="res://trash-can.png" type="Texture" id=2]
+[ext_resource path="res://Edit_icon.png" type="Texture" id=3]
+
+[node name="SharedSpaceButton" type="Control"]
+rect_min_size = Vector2( 120, 22 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -846.0
+margin_bottom = -578.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Container"]
+margin_top = 4.0
+margin_right = 120.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 120, 0 )
+text = "name: tokens"
+
+[node name="EditButton" type="TextureButton" parent="Container"]
+margin_left = 124.0
+margin_right = 146.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 22, 22 )
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="DeleteButton" type="TextureButton" parent="Container"]
+margin_left = 150.0
+margin_right = 172.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 22, 22 )
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="DeletePop" type="WindowDialog" parent="."]
+visible = true
+margin_left = 3.0
+margin_top = 50.0
+margin_right = 163.0
+margin_bottom = 147.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DeletePop"]
+margin_left = -3.57971
+margin_top = 7.57266
+margin_right = 161.42
+margin_bottom = 55.5727
+text = "Are you sure you 
+want to delete this
+ shared space?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfirmDeleteButton" type="Button" parent="DeletePop"]
+margin_left = 31.6752
+margin_top = 66.7515
+margin_right = 126.675
+margin_bottom = 86.7515
+text = "Yes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EditPop" type="WindowDialog" parent="."]
+visible = true
+margin_left = 208.0
+margin_top = 62.0
+margin_right = 370.0
+margin_bottom = 166.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InstrunctionLabel" type="Label" parent="EditPop"]
+margin_left = 9.92126
+margin_top = 7.54016
+margin_right = 143.921
+margin_bottom = 38.5402
+text = "Edit token number in
+name:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TokenEdit" type="LineEdit" parent="EditPop"]
+margin_left = 11.9843
+margin_top = 41.9843
+margin_right = 145.984
+margin_bottom = 65.9843
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfirmEditButton" type="Button" parent="EditPop"]
+margin_left = 14.0
+margin_top = 72.0
+margin_right = 144.0
+margin_bottom = 92.0
+text = "Save Changes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Container/EditButton" to="." method="_on_EditButton_pressed"]
+[connection signal="pressed" from="Container/DeleteButton" to="." method="_on_DeleteButton_pressed"]
+[connection signal="pressed" from="DeletePop/ConfirmDeleteButton" to="." method="_on_ConfirmDeleteButton_pressed"]
+[connection signal="pressed" from="EditPop/ConfirmEditButton" to="." method="_on_ConfirmEditButton_pressed"]
