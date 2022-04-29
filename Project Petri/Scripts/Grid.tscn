@@ -148,14 +148,14 @@ position = Vector2( 764.928, 24 )
 
 [node name="square" type="Sprite" parent="."]
 modulate = Color( 0.2, 0.2, 0.2, 1 )
-position = Vector2( 910.764, 34.3974 )
-scale = Vector2( 2.9375, 0.778392 )
+position = Vector2( 892.355, 34.3974 )
+scale = Vector2( 1.99432, 0.778392 )
 texture = ExtResource( 2 )
 
 [node name="PlayButt" type="TextureButton" parent="."]
-margin_left = 825.699
+margin_left = 837.472
 margin_top = 20.011
-margin_right = 1337.7
+margin_right = 1349.47
 margin_bottom = 532.011
 rect_scale = Vector2( 0.05, 0.05 )
 focus_mode = 0
@@ -166,10 +166,10 @@ __meta__ = {
 }
 
 [node name="InspectButt" type="TextureButton" parent="."]
-margin_left = 854.0
+margin_left = 876.773
 margin_top = 20.0
-margin_right = 1366.0
-margin_bottom = 532.0
+margin_right = 1900.77
+margin_bottom = 1044.0
 rect_min_size = Vector2( 512, 512 )
 rect_scale = Vector2( 0.025, 0.025 )
 focus_mode = 0
@@ -180,9 +180,9 @@ __meta__ = {
 }
 
 [node name="ClearButt" type="TextureButton" parent="."]
-margin_left = 884.498
+margin_left = 916.271
 margin_top = 20.011
-margin_right = 1396.5
+margin_right = 1428.27
 margin_bottom = 532.011
 rect_scale = Vector2( 0.05, 0.05 )
 focus_mode = 0
@@ -193,6 +193,7 @@ __meta__ = {
 }
 
 [node name="GoBackButton" type="Button" parent="."]
+visible = false
 margin_left = 921.236
 margin_top = 19.0
 margin_right = 993.236

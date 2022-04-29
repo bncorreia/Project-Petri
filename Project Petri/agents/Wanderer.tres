@@ -1,0 +1,35 @@
+NAME Wanderer
+#P 2
+#T 5
+P 1 1
+P 2 0
+T 1 2 1
+T 2 5 1
+T 3 3 1
+T 4 4 1
+T 5 1 Flower
+PN 1 Choice
+PN 2 Seeds
+TN 1 Up
+TN 2 Right
+TN 3 Down
+TN 4 Left
+TN 5 Plant_Flower
+PP 1 457 243
+PP 2 675 395
+TP 1 548 83
+TP 2 679 241
+TP 3 355 438
+TP 4 263 232
+TP 5 769 395
+ARC P 1 T 1 1
+ARC T 1 P 1 1
+ARC P 1 T 2 1
+ARC T 2 P 1 1
+ARC T 2 P 2 1
+ARC P 1 T 3 1
+ARC T 3 P 1 1
+ARC P 1 T 4 1
+ARC T 4 P 1 1
+ARC P 2 T 5 1
+C 0.277871 0.814856 0.855469
